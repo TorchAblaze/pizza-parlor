@@ -83,11 +83,21 @@ Test: "Join the pizza topping array so the toppings list is a string with each l
 Code:\
 const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"]);\
 pizza.pizzaCost()\
-Expected Output: "medium", "pepperoni, red peppers, green peppers"
+Expected Output: "medium", "pepperoni, red peppers, green peppers", "$7.50"
 \
 \
 Describe: PizzaOrders()
 
 Test: "Create a pizza orders objects that can store another object and create unique order numbers"/
-Code: PizzaOrder()/
-Expected Output:
+Code: PizzaOrder()\
+Expected Output: {orders: {}, currentOrderId: 0}
+\
+\
+Describe: PizzaOrders.addOrder()
+
+Test: "Pizza Objects should be added to Pizza Order object through a protoype"
+Code:\
+const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"]);\
+PizzaOrder.addOrder(pizza)\
+PizzaOrder()
+Expected Output: {orders: {orderid = 1 {"medium"; "pepperoni, red peppers, green peppers"; "7.50"}; currentOrderId: 1}}

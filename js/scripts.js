@@ -4,6 +4,16 @@ function PizzaOrders() {
   this.currentOrderId = 0;
 }
 
+PizzaOrders.prototype.assignOrderId = function () {
+  this.currentOrderId += 1;
+  return this.currentOrderId;
+};
+
+PizzaOrders.prototype.addOrder = function (order) {
+  order.id = this.assignOrderId();
+  this.orders[order.id] = order;
+};
+
 // Business Logic for Pizza
 function Pizza(size, toppings) {
   this.size = size;
