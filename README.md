@@ -62,7 +62,7 @@ Describe: Pizza.pizzaCost()\
 Test: "Create a prototype that will calculate the cost of the pizza based on size"\
 Code:\
 const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"]);\
-pizza.pizzaCost()
+pizza.pizzaCost()\
 Expected Output: $7.00
 
 Test: "Create a prototype that will calculate the cost of the pizza based on size and the amount of toppings"\
@@ -77,3 +77,9 @@ const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"])
 pizza.pizzaCost()\
 pizza\
 Expected Output: Pizza {size: 'medium', toppings: [ 'pepperoni', 'red peppers', 'green peppers' ], cost: '$7.50'}
+
+Test: "Join the pizza topping array so the toppings list is a string with each listed item separated by commas"\
+Code:\
+const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"]);\
+pizza.pizzaCost()\
+Expected Output: "medium", "pepperoni, red peppers, green peppers"
