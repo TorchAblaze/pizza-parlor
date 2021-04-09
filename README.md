@@ -53,6 +53,20 @@ Expected Output: "medium"
 
 Test: "Add a toppings property that returns an array of desired toppings"\
 Code:\
-const pizza = new Pizza("medium", ["pepperoni, red peppers, green peppers"]);\
+const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"]);\
 pizza.toppings\
-Expected Output: ["pepperoni, red peppers, green peppers"];
+Expected Output: ["pepperoni", "red peppers", "green peppers"];
+\
+\
+Describe: Pizza.pizzaCost()\
+Test: "Create a prototype that will calculate the cost of the pizza based on size"\
+Code:\
+const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"]);\
+pizza.pizzaCost()
+Expected Output: $7.00
+
+Test: "Create a prototype that will calculate the cost of the pizza based on size and the amount of toppings"\
+Code:\
+const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"]);\
+pizza.pizzaCost()
+Expected Output: $7.50
