@@ -1,23 +1,3 @@
-// Business Logic for Pizza Orders
-function PizzaOrders() {
-  this.orders = {};
-  this.currentOrderId = 0;
-}
-
-PizzaOrders.prototype.assignOrderId = function () {
-  this.currentOrderId += 1;
-  return this.currentOrderId;
-};
-
-PizzaOrders.prototype.addOrder = function (order) {
-  order.id = this.assignOrderId();
-  this.orders[order.id] = order;
-};
-
-PizzaOrders.prototype.findOrderId = function (id) {
-  return this.orders[id];
-};
-
 // Business Logic for Pizza
 function Pizza(size, toppings) {
   this.size = size;
@@ -50,33 +30,31 @@ Pizza.prototype.pizzaCost = function () {
 };
 
 // UI Logic
-function displayPizzaOrders(pizzaOrders) {
-  let pizzaOrderList = $("ul#pizza-orders");
-  let pizzaOrderInfo = "";
-
-  Object.keys(pizzaOrders.orders).forEach(function (key) {
-    const order = pizzaOrders.findOrderId(key);
-    pizzaOrderInfo += `<li id=${order.id}>Order: ${order.id}</li>`;
-    pizzaOrderList.html(pizzaOrderInfo);
-  });
-}
-
 $(document).ready(function () {
+  let pizzaOrders = [];
   $("form#pizza-order").submit(function (event) {
-    event.preventDefault();
     const pizzaSize = $("input:radio[name=size]:checked").val();
     const pizzaToppings = [];
     $("input:checkbox[name=toppings]:checked").each(function () {
       pizzaToppings.push($(this).val());
     });
-
     let pizzaOrder = new Pizza(pizzaSize, pizzaToppings);
-    let allPizzaOrders = new PizzaOrders();
 
     pizzaOrder.pizzaCost();
-    allPizzaOrders.addOrder(pizzaOrder);
-    displayPizzaOrders(allPizzaOrders);
+    pizzaOrders.push(pizzaOrder);
 
     $("#output").show();
+    let pizzaOrderNumbers = "";
+    pizzaOrders.forEach(function (order, index) {
+      pizzaOrderNumbers += `<li id=${index + 1}>Order Number: ${
+        index + 1
+      }</li> <ul> <li id=${order.size}>Size: ${order.size}</li> <li id=${
+        order.toppings
+      }>Toppings: ${order.toppings}</li> <li id=${order.cost}>Cost: ${
+        order.cost
+      }</li>`;
+    });
+    $("ul#pizza-orders").html(pizzaOrderNumbers);
+    event.preventDefault();
   });
 });
