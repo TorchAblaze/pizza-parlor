@@ -42,3 +42,11 @@ _Please reach out through my GitHub account._
 MIT License.
 
 Copyright (c) 2021 **_Tiffany Greathead_**
+
+Describe: Pizza()
+
+- Test: "Make an object constructor that has a size property"
+- Code:
+  - const pizza = new Pizza("medium");
+  - pizza.size
+- Expected Output: "medium"
