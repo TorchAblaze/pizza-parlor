@@ -45,8 +45,14 @@ Copyright (c) 2021 **_Tiffany Greathead_**
 
 Describe: Pizza()
 
-- Test: "Make an object constructor that has a size property"
-- Code:
-  - const pizza = new Pizza("medium");
-  - pizza.size
-- Expected Output: "medium"
+Test: "Make an object constructor that has a size property" \
+Code:\
+const pizza = new Pizza("medium"); \
+pizza.size \
+Expected Output: "medium"
+
+Test: "Add a toppings property that returns an array of desired toppings"\
+Code:\
+const pizza = new Pizza("medium", ["pepperoni, red peppers, green peppers"]);\
+pizza.toppings\
+Expected Output: ["pepperoni, red peppers, green peppers"];

@@ -1,6 +1,7 @@
 // Business Logic
-function Pizza(size) {
+function Pizza(size, toppings) {
   this.size = size;
+  this.toppings = toppings;
 }
 
 // UI Logic
