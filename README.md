@@ -68,5 +68,12 @@ Expected Output: $7.00
 Test: "Create a prototype that will calculate the cost of the pizza based on size and the amount of toppings"\
 Code:\
 const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"]);\
-pizza.pizzaCost()
+pizza.pizzaCost()\
 Expected Output: $7.50
+
+Test: "Add a cost property to the Pizza Object"\
+Code:\
+const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"]);\
+pizza.pizzaCost()\
+pizza\
+Expected Output: Pizza {size: 'medium', toppings: [ 'pepperoni', 'red peppers', 'green peppers' ], cost: '$7.50'}

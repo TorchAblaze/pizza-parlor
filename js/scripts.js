@@ -24,7 +24,8 @@ Pizza.prototype.pizzaCost = function () {
   } else {
     this.toppings = "none";
   }
-  return costFormatter.format(cost);
+  this.cost = costFormatter.format(cost);
+  return this.cost;
 };
 
 // UI Logic
