@@ -9,8 +9,9 @@
   <div class="container">
     <div class="jumbotron">
       <h1>Pizza My Heart &#60;3</h1>
-      <p><strong>For the love of all things cheesy</strong></p>
+      <p><strong>For weirdoughs that love all things cheesy</strong></p>
     </div>
+    <p>Welcome to Pizza My Heart! Fill out the order form below for the pizza size and toppings you want and click "Order Now" to order your pizza. Once each order is submitted, fill out the order form again for all the pizzas you love! Submitted orders will appear below the order form; click on them to see details of that particular order. Prices will vary depending on pizza size and number of toppings. Have a lovely day!</p>
     <form id="pizza-order">
       <p>What size pizza would you love?</p>
       <div class="form-check">
@@ -31,15 +32,75 @@
           Large
         </label>
       </div>
-      <p>What toppings would you love to add?</p>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="pepperoni" id="pepperoni">
-        <label class="form-check-label" for="pepperoni">
-          Pepperoni
-        </label>
-      
+
+      <br>
+
+      <p>What toppings would you love to have?</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="cheese" id="cheese">
+            <label class="form-check-label" for="cheese">
+              Cheese</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="pepperoni" id="pepperoni">
+            <label class="form-check-label" for="pepperoni">
+              Pepperoni
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="red-peppers" id="red-peppers">
+            <label class="form-check-label" for="red-peppers">
+              Red Peppers
+            </label>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="green-peppers" id="green-peppers">
+            <label class="form-check-label" for="green-peppers">
+              Green Peppers
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="artichoke" id="artichoke">
+            <label class="form-check-label" for="artichoke">
+              Artichoke
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="anchovy" id="anchovy">
+            <label class="form-check-label" for="anchovy">
+              Anchovy
+            </label>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="bacon" id="bacon">
+            <label class="form-check-label" for="bacon">
+              Bacon
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="pineapple" id="pineapple">
+            <label class="form-check-label" for="pineapple">
+              Pineapple
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="sausage" id="sausage">
+            <label class="form-check-label" for="sausage">
+              Sausage
+            </label>
+          </div>
+        </div>
       </div>
     </form>
+    <div id="output">
+
+    </div>
   </div>
 </body>
 </html>

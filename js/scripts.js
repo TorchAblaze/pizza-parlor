@@ -16,9 +16,9 @@ Pizza.prototype.pizzaCost = function () {
     cost += 2.0;
   }
   if (this.toppings) {
-    if (this.toppings.length > 3) {
+    if (this.toppings.length > 4) {
       cost += 0.75;
-    } else if (this.toppings.length > 1) {
+    } else if (this.toppings.length > 2) {
       cost += 0.5;
     }
   } else {
