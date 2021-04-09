@@ -59,6 +59,7 @@ Expected Output: ["pepperoni", "red peppers", "green peppers"];
 \
 \
 Describe: Pizza.pizzaCost()\
+
 Test: "Create a prototype that will calculate the cost of the pizza based on size"\
 Code:\
 const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"]);\
@@ -83,3 +84,10 @@ Code:\
 const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"]);\
 pizza.pizzaCost()\
 Expected Output: "medium", "pepperoni, red peppers, green peppers"
+\
+\
+Describe: PizzaOrders()
+
+Test: "Create a pizza orders objects that can store another object and create unique order numbers"/
+Code: PizzaOrder()/
+Expected Output:
