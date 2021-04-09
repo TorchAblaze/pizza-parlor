@@ -101,3 +101,10 @@ const pizza = new Pizza("medium", ["pepperoni", "red peppers", "green peppers"])
 PizzaOrder.addOrder(pizza)\
 PizzaOrder()
 Expected Output: {orders: {orderid = 1 {"medium"; "pepperoni, red peppers, green peppers"; "7.50"}; currentOrderId: 1}}
+\
+\
+Describe: displayPizzaOrders()
+
+Test: "A function should return all the orders in the PizzaOrders() object"
+Code: displayPizzaOrders(PizzaOrders())\
+Expected Output: Order Number: 1 Size: medium Toppings: pepperoni, red peppers, green peppers Total: "$7.50"

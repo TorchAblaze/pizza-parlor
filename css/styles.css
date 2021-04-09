@@ -5,3 +5,7 @@
   text-align: center;
   font-size: larger;
 }
+
+#output {
+  display: none;
+}

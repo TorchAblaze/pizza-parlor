@@ -14,6 +14,10 @@ PizzaOrders.prototype.addOrder = function (order) {
   this.orders[order.id] = order;
 };
 
+PizzaOrders.prototype.findOrderId = function (id) {
+  return this.orders[id];
+};
+
 // Business Logic for Pizza
 function Pizza(size, toppings) {
   this.size = size;
@@ -46,6 +50,17 @@ Pizza.prototype.pizzaCost = function () {
 };
 
 // UI Logic
+function displayPizzaOrders(pizzaOrders) {
+  let pizzaOrderList = $("ul#pizza-orders");
+  let pizzaOrderInfo = "";
+
+  Object.keys(pizzaOrders.orders).forEach(function (key) {
+    const order = pizzaOrders.findOrderId(key);
+    pizzaOrderInfo += `<li id=${order.id}>Order: ${order.id}</li>`;
+    pizzaOrderList.html(pizzaOrderInfo);
+  });
+}
+
 $(document).ready(function () {
   $("form#pizza-order").submit(function (event) {
     event.preventDefault();
@@ -56,10 +71,12 @@ $(document).ready(function () {
     });
 
     let pizzaOrder = new Pizza(pizzaSize, pizzaToppings);
+    let allPizzaOrders = new PizzaOrders();
+
     pizzaOrder.pizzaCost();
-    $("#output").text(
-      `Size: ${pizzaOrder.size} Toppings: ${pizzaOrder.toppings} Total: ${pizzaOrder.cost}`
-    );
-    console.log(pizzaOrder.toppings);
+    allPizzaOrders.addOrder(pizzaOrder);
+    displayPizzaOrders(allPizzaOrders);
+
+    $("#output").show();
   });
 });
