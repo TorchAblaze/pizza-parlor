@@ -1,10 +1,12 @@
-# Pizza Parlor
+# Pizza My Heart
 
 #### _A website where you can order pizzas, 4/9/2021_
 
 #### By _**Tiffany Greathead**_
 
 ## Description
+
+Pizza My Heart is a website for a nonexistent pizza parlor. Users can choose what size pizza they want (small, medium or large) and check what types of toppings they want from the list provided. After the user selects the "Order Now" button, a summary of their order will appear below the form as well as the total cost of that order. Pizza prices may vary depending on what size pizza is ordered, and the number of toppings it has. Each order is stored as a JavaScript object which is then stored in an array.
 
 ## Setup/Installation Requirements
 
