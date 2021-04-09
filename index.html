@@ -3,11 +3,43 @@
 <head>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <title>Pizza Parlor</title>
+  <title>Pizza My Heart</title>
 </head>
 <body>
   <div class="container">
-    
+    <div class="jumbotron">
+      <h1>Pizza My Heart &#60;3</h1>
+      <p><strong>For the love of all things cheesy</strong></p>
+    </div>
+    <form id="pizza-order">
+      <p>What size pizza would you love?</p>
+      <div class="form-check">
+        <label>
+          <input type="radio" name="size" value="small" checked>
+          Small
+        </label>
+      </div>
+      <div class="form-check">
+        <label>
+          <input type="radio" name="size" value="medium">
+          Medium
+        </label>
+      </div>
+      <div class="form-check">
+        <label>
+          <input type="radio" name="size" value="large">
+          Large
+        </label>
+      </div>
+      <p>What toppings would you love to add?</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="pepperoni" id="pepperoni">
+        <label class="form-check-label" for="pepperoni">
+          Pepperoni
+        </label>
+      
+      </div>
+    </form>
   </div>
 </body>
 </html>
