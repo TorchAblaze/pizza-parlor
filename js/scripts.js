@@ -29,3 +29,12 @@ Pizza.prototype.pizzaCost = function () {
 };
 
 // UI Logic
+$(document).ready(function () {
+  $("form#pizza-order").submit(function (event) {
+    event.preventDefault();
+    const pizzaSize = $("input:radio[name=size]:checked").val();
+    const pizzaToppings = $("input:checkbox[name=toppings]:checked").val();
+    console.log(pizzaSize);
+    console.log(pizzaToppings);
+  });
+});
