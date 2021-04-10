@@ -60,7 +60,7 @@ pizza.toppings\
 Expected Output: ["pepperoni", "red peppers", "green peppers"];
 \
 \
-Describe: Pizza.pizzaCost()\
+Describe: Pizza.pizzaCost()
 
 Test: "Create a prototype that will calculate the cost of the pizza based on size"\
 Code:\
